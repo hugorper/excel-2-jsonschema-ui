@@ -1,0 +1,26 @@
+{
+  "name": "excel-2-jsonschema-ui",
+  "version": "1.0.0",
+  "description": "nw.js features demonstrated in a simple project",
+  "license": "MIT",
+  "author": {
+    "name": "hugorper",
+    "url": "https://github.com/hugorper"
+  },
+  "repository": {
+    "url": "https://github.com/hugorper/excel-2-jsonschema-ui",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/hugorper/excel-2-jsonschema-ui/issues"
+  },
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+  },
+  "devDependencies": {
+    "nw": "^0.18.3",
+    "nw-builder": "^3.1.2",
+    "@hugorper/excel-2-jsonschema": "^0.4.2"
+  }
+}
