@@ -1,7 +1,5 @@
 # Excel-2-jsonschema-ui
 
-README file outdated
-
 This project is a desktop app that generate Json-Schema from an Excel file.
 It was created with [NW.js][nwjs], for more info [Building a Cross-Platform Desktop App with NW.js][article] on Sitepoint.
 
