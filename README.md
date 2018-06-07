@@ -40,4 +40,5 @@ The output files can be found under `dist/`.
 [article]: https://www.sitepoint.com/cross-platform-desktop-app-nw-js
 [nodejs]: https://nodejs.org/en/
 [nodejs]: https://nodejs.org/en/
+[download]: https://github.com/hugorper/excel-2-jsonschema-ui
 
