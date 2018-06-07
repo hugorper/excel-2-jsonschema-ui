@@ -7,7 +7,7 @@ It was created with [NW.js][nwjs], for more info [Building a Cross-Platform Desk
 
 ## Install Binaries
 
-[release][release]
+[Download binaries (win32, win64, OS X 64, linux32, linux64)][release]
 
 ## Install from Source
 
