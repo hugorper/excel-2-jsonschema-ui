@@ -1,13 +1,9 @@
 # Excel-2-jsonschema-ui
 
-THIS FILE reQUIRE UPDATES
+README file outdated
 
-This project is a desktop app that generate Json-Schema from eExcel file.
+This project is a desktop app that generate Json-Schema from an Excel file.
 It was created with [NW.js][nwjs], for more info [Building a Cross-Platform Desktop App with NW.js][article] on Sitepoint.
-
-## Requirements
-
-- [Node.js][nodejs]
 
 ## Installation
 
@@ -42,5 +38,6 @@ The output files can be found under `dist/`.
 
 [nwjs]: http://nwjs.io/
 [article]: https://www.sitepoint.com/cross-platform-desktop-app-nw-js
+[nodejs]: https://nodejs.org/en/
 [nodejs]: https://nodejs.org/en/
 

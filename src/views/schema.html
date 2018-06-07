@@ -1,33 +1,59 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>nw.js-examples | shell</title>
+    <title>Excel to Json-Schema Converter</title>
     <link rel="stylesheet" href="../styles/common.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h2>Shell</h2>
-            </div>
+        <div class="card-block">
+            <a href="main.html" class="btn">
+                <i class="fa fa-chevron-left"></i>Back to home
+            </a>
+        </div>
+        <div class="card rounded-0">
             <div class="card-block">
-                <p class="h4">Choose a file</p>
-                <p class="alert alert-info">
-                    After choosing a file the file manager will be opened with the path of the chosen
-                    file
+                <p class="alert alert-dark rounded-0">
+                        Choose input Excel file and output folder and generate output.
                 </p>
-                <form>
-                    <div class="form-group">
-                        <input class="form-control" type="file" id="file" name="file">
+            </div>
+            <br>
+            <form>
+                <div class="input-group  mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="file">
+                        <label id="forFile" class="custom-file-label" for="file">Choose excel input file</label>
                     </div>
-                </form>
-            </div>
-            <div class="card-footer">
-                <a href="main.html" class="btn btn-primary btn-back">
-                    <i class="fa fa-chevron-left"></i>Back to home
-                </a>
-            </div>
+                </div>
+                <div class="input-group  mb-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="path" nwdirectory>
+                        <label id="forPath" class="custom-file-label" for="path">Choose output folder</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Version</span>
+                    </div>
+                    <input id="version" type="text" class="form-control" placeholder="Version" aria-label="Version" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Excel sheet name</span>
+                    </div>
+                    <input id="sheetName" type="text" class="form-control" placeholder="SheetName" aria-label="SheetName" aria-describedby="basic-addon1">
+                </div>
+                <div id="outputInfo" class="alert  mb-3" role="alert">
+                    
+                </div>                
+            </form>
+            <button id="execute" type="button" class="btn btn-primary btn-lg btn-block rounded-0" autocomplete="off">
+                    Execute
+            </button>
+
         </div>
     </div>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -35,4 +61,5 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../app/schema.js"></script>
 </body>
+
 </html>

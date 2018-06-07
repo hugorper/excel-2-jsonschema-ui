@@ -1,37 +1,57 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Excel to Json-Schema Converter</title>
     <link rel="stylesheet" href="../styles/common.css">
 </head>
+
 <body>
     <div class="container">
         <div class="card">
-            <div class="card-header">
-                <h4>Choose an option</h4>
-            </div>
-            <div class="card-body">
-                <div class="list-group list-group-flush">
-                    <a href="schema.html" class="list-group-item">
-                        <i class="fa fa-file-excel-o fa-fw"></i>Generate JSon-Schema
-                    </a>
-                    <a href="json.html" class="list-group-item">
-                        <i class="fa fa-file-excel-o fa-fw"></i>Generate JSon file
-                    </a>
-                    <a href="information.html" class="list-group-item">
-                        <i class="fa fa-info-circle fa-fw"></i>Information/Help
-                    </a>
-                    <a href="devtools.html" class="list-group-item">
-                        <i class="fa fa-html5 fa-fw"></i>Developer Tools
-                    </a>
-                    
+            <div class="card-body  alert-dark rounded-0">
+                <div class="media rounded-0">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1"></h5>
+                    </div>
+                    <img class="ml-3" width="150px" src="../assets/gatego.svg" alt="Logo">
                 </div>
+                <h4 class="card-title">Select option</h4>
+                <p class="card-text">You can convert Excel sheet to Json-Schema or Json data file.</p>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="schema.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">JSon-Schema</h5>
+                    </div>
+                    <p class="mb-1">Generate a Json-Schema from an Excel file.</p>
+                </a>
+                <a href="json.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">JSon</h5>
+                    </div>
+                    <p class="mb-1">Generate a Json file from an Excel file.</p>
+                </a>
+                <a href="javascript:nw.Window.get().showDevTools();" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Developer Tools</h5>
+                    </div>
+                    <p class="mb-1">Show chrome developer window.</p>
+                </a>
+                <a href="information.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Excel/Info</h5>
+                        </div>
+                        <p class="mb-1">Download Excel template and show NodeJs version.</p>
+                    </a>                
             </div>
         </div>
     </div>
+
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/tether/dist/js/tether.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

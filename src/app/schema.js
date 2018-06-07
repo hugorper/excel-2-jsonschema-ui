@@ -1,20 +1,76 @@
-const input = document.querySelector("input[type='file']");
-var generateJSONSchema = require('../node_modules/@hugorper/excel-2-jsonschema/lib/generate-json-schema.js');
-var generateJSONExample = require('../node_modules/@hugorper/excel-2-jsonschema/lib/generate-json-example.js');
+const input = document.querySelector("input[id='file']");
+const path = document.querySelector("input[id='path']");
+const sheetName = document.querySelector("input[id='sheetName']");
+const version = document.querySelector("input[id='version']");
+const forFile = document.querySelector("label[id='forFile']");
+const foPath = document.querySelector("label[id='forPath']");
+const execute = document.querySelector("button[id='execute']");
+const outputInfo = document.querySelector("div[id='outputInfo']");
+
+const generateJSONSchema = require('../node_modules/@hugorper/excel-2-jsonschema/lib/generate-json-schema.js');
+
+outputInfo.innerHTML = "";
+
+var option = {
+    inputExcelFile: '',
+    sheetName: 'Schema',
+    outputDir: '',
+    versionSchema: 'http://json-schema.org/draft-07/schema#'
+}; 
+
+
+sheetName.value = option.sheetName;
+version.value = option.versionSchema;
+
 
 input.addEventListener("change", () => {
     // Get the native path of the file selected by user
     const file = input.value;
-
-    var knownOptions = {
-        inputExcelFile: file,
-        sheetName: "Schema",
-        outputDir: 'c:\\Projects\\hugorper\\Excel2JsonSchemaUI\\nw.js-examples\\out\\',
-        versionSchema: 'http://json-schema.org/draft-07/schema#'
-    };   
-    
-    generateJSONSchema(knownOptions.inputExcelFile, knownOptions.sheetName, knownOptions.outputDir, false, knownOptions.versionSchema);
-      
-    // Open the file in the native explorer using the shell API
-    nw.Shell.showItemInFolder(file);
+    forFile.innerHTML = file;
 });
+
+path.addEventListener("change", () => {
+    // Get the native path of the file selected by user
+    const file = input.value;
+    
+    forPath.innerHTML = path.value;
+  
+});
+
+execute.addEventListener("click", () => {
+    var error = false;
+    outputInfo.innerHTML = "";
+
+
+    if (forFile.innerHTML == 'Choose excel input file') {
+        error = true;
+        outputInfo.innerHTML += "Excel file not selected<br>";
+    }
+    if (foPath.innerHTML == 'Choose output folder') {
+        error = true;
+        outputInfo.innerHTML += "Output foldere not selected<br>";
+    }
+    if (sheetName.value == '') {
+        error = true;
+        outputInfo.innerHTML += "Enter sheet name<br>";
+    }
+    if (version.value == '') {
+        error = true;
+        outputInfo.innerHTML += "Enter Json-Schema version<br>";
+    }
+
+    if (!error) {
+
+        option.inputExcelFile = forFile.innerHTML;
+        option.outputDir = forPath.innerHTML;
+        option.sheetName = sheetName.value;
+        option.versionSchema = version.value;
+
+        generateJSONSchema(option.inputExcelFile, option.sheetName, option.outputDir, false, option.versionSchema);
+
+        outputInfo.innerHTML += "Terminated";
+    }
+
+});
+
+
