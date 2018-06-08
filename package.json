@@ -1,6 +1,6 @@
 {
   "name": "excel-2-jsonschema-ui",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "excel to json-schema convertion tool.",
   "license": "MIT",
   "author": {

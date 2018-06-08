@@ -6,6 +6,7 @@ const forFile = document.querySelector("label[id='forFile']");
 const foPath = document.querySelector("label[id='forPath']");
 const execute = document.querySelector("button[id='execute']");
 const outputInfo = document.querySelector("div[id='outputInfo']");
+const embeded = document.querySelector("input[type='checkbox']");
 
 const generateJSONSchema = require('../node_modules/@hugorper/excel-2-jsonschema/lib/generate-json-schema.js');
 
@@ -40,8 +41,7 @@ path.addEventListener("change", () => {
 execute.addEventListener("click", () => {
     var error = false;
     outputInfo.innerHTML = "";
-
-
+    
     if (forFile.innerHTML == 'Choose excel input file') {
         error = true;
         outputInfo.innerHTML += "Excel file not selected<br>";
@@ -66,7 +66,7 @@ execute.addEventListener("click", () => {
         option.sheetName = sheetName.value;
         option.versionSchema = version.value;
 
-        generateJSONSchema(option.inputExcelFile, option.sheetName, option.outputDir, false, option.versionSchema);
+        generateJSONSchema(option.inputExcelFile, option.sheetName, option.outputDir, embeded.checked, option.versionSchema);
 
         outputInfo.innerHTML += "Terminated";
     }

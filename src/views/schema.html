@@ -17,7 +17,7 @@
         <div class="card rounded-0">
             <div class="card-block">
                 <p class="alert alert-dark rounded-0">
-                        Choose input Excel file and output folder and generate output.
+                    Choose input Excel file and output folder and generate output.
                 </p>
             </div>
             <br>
@@ -46,12 +46,25 @@
                     </div>
                     <input id="sheetName" type="text" class="form-control" placeholder="SheetName" aria-label="SheetName" aria-describedby="basic-addon1">
                 </div>
+                    <div class="row align-items-start" style="padding-left: 5px;padding-right: 5px;">
+                        <div class="col col-lg-10">
+                            Embed related schema
+                        </div>
+                        <div class="col col-lg-2">
+                            <!-- Rounded switch -->
+                            <label class="switch float-right">
+                                <input id="embed" type="checkbox">
+                                <span class="slider round"></span>&nbsp;
+                            </label>
+                        </div>
+                    </div>
+
                 <div id="outputInfo" class="alert  mb-3" role="alert">
-                    
-                </div>                
+
+                </div>
             </form>
             <button id="execute" type="button" class="btn btn-primary btn-lg btn-block rounded-0" autocomplete="off">
-                    Execute
+                Execute
             </button>
 
         </div>
